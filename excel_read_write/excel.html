@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+	<title>JS读取和导出excel示例</title>
+	<meta name="description" content="使用sheetjs读取和导出excel示例">
+	<script type="text/javascript" src="xlsx.core.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="excel.css" />
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="excel.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>JavaScript读取和导出excel示例（基于js-xlsx）</h1>
+		<div>
+			<a href="http://blog.haoji.me/js-excel.html" _target="_blank">如何使用JavaScript实现纯前端读取和导出excel文件</a><br>
+			<a href="http://oss.sheetjs.com/js-xlsx/">官网演示</a><br>
+			<a href="https://github.com/SheetJS/js-xlsx/">Github</a>
+		</div>
+		<h2>读取excel（仅读取第一个sheet）</h2>
+		<div class="mt-sm">
+			<input type="file" id="file" style="display:none;" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+			<a href="javascript:selectFile()">加载本地excel文件</a>
+		</div>
+		
+		<p>结果输出：（下面表格可直接编辑导出）</p>
+		<div id="result" contenteditable></div>
+
+		<h2>导出excel</h2>
+		<div class="mt-sm" style="padding-bottom:40px;">
+			<input type="button" onclick="exportExcel()" value="保存"/> 上面读取的表格您可以直接编辑，编辑后点击保存即可导出excel文件。
+		</div>
+
+		<h2>导出带单元格合并的excel</h2>
+		<input type="button" value="导出" onclick="exportSpecialExcel()"/>
+	</div>
+</body>
+</html>
