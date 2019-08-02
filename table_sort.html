@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="utf-8">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>姓名</th>
+                <th id="th1" onclick="SortTable1(this)" class="as">力量</th>
+            </tr>
+            <tr>
+                <td>德鲁</td>
+                <td name="td1">0</td>
+            </tr>
+            <tr>
+                <td>月之</td>
+                <td name="td1">1</td>
+            </tr>
+            <tr>
+                <td>众神</td>
+                <td name="td1">2</td>
+            </tr>
+            <tr>
+                <td>流浪</td>
+                <td name="td1">3</td>
+            </tr>
+			<tr>
+			    <td>德伊</td>
+			    <td name="td1">4</td>
+			</tr>
+			<tr>
+			    <td>骑士</td>
+			    <td name="td1">5</td>
+			</tr>
+			<tr>
+			    <td>之王</td>
+			    <td name="td1">6</td>
+			</tr>
+			<tr>
+			    <td>剑客</td>
+			    <td name="td1">7</td>
+			</tr>
+		</table>
+		
+		<table>
+		    <tr>
+		        <th>姓名</th>
+		        <th id="th2" onclick="SortTable2(this)" class="as">敏捷</th>
+		    </tr>
+		    <tr>
+		        <td>德伊</td>
+		        <td name="td2">0</td>
+		    </tr>
+		    <tr>
+		        <td>月之</td>
+		        <td name="td2">1</td>
+		    </tr>
+		    <tr>
+		        <td>众神</td>
+		        <td name="td2">2</td>
+		    </tr>
+		    <tr>
+		        <td>流浪</td>
+		        <td name="td2">3</td>
+		    </tr>
+			<tr>
+			    <td>德鲁</td>
+			    <td name="td2">4</td>
+			</tr>
+			<tr>
+			    <td>骑士</td>
+			    <td name="td2">5</td>
+			</tr>
+			<tr>
+			    <td>之王</td>
+			    <td name="td2">6</td>
+			</tr>
+			<tr>
+			    <td>剑客</td>
+			    <td name="td2">7</td>
+			</tr>
+		</table>
+    </body>
+</html>
+
+<script type="text/javascript"> 
+    function sortNumberAS(a, b) {
+        return a - b    
+    }
+	
+    function sortNumberDesc(a, b) {
+        return b - a
+    }
+	
+    function SortTable1(obj) {
+        var td1s=document.getElementsByName("td1");
+        var tdArray1=[];
+        for(var i=0;i<td1s.length;i++){
+            tdArray1.push(parseInt(td1s[i].innerHTML));
+        }
+		
+		var tds=document.getElementsByName("td"+obj.id.substr(2,1));
+		var columnArray=[];
+		for(var i=0;i<tds.length;i++){
+		    columnArray.push(parseInt(tds[i].innerHTML));
+		}
+		var orginArray=[];
+		for(var i=0;i<columnArray.length;i++){
+		    orginArray.push(columnArray[i]);
+		}
+		
+        if(obj.className=="as"){
+            columnArray.sort(sortNumberAS);               //排序后的新值
+            obj.className="desc";
+        }else{
+            columnArray.sort(sortNumberDesc);             //排序后的新值
+            obj.className="as";
+        }
+
+        for(var i=0;i<columnArray.length;i++){
+            for(var j=0;j<orginArray.length;j++){
+                if(orginArray[j]==columnArray[i]){
+                    document.getElementsByName("td1")[i].innerHTML=tdArray1[j];
+                    orginArray[j]=null;
+                    break;
+                }
+            }
+        }
+    }
+	
+	function SortTable2(obj) {
+	    var td2s=document.getElementsByName("td2");
+	    var tdArray2=[];
+	    for(var i=0;i<td2s.length;i++){
+	        tdArray2.push(parseInt(td2s[i].innerHTML));
+	    }
+	    
+		var tds=document.getElementsByName("td"+obj.id.substr(2,1));
+		var columnArray=[];
+		for(var i=0;i<tds.length;i++){
+		    columnArray.push(parseInt(tds[i].innerHTML));
+		}
+		var orginArray=[];
+		for(var i=0;i<columnArray.length;i++){
+		    orginArray.push(columnArray[i]);
+		}
+		
+		if(obj.className=="as"){
+		    columnArray.sort(sortNumberAS);               //排序后的新值
+		    obj.className="desc";
+		}else{
+		    columnArray.sort(sortNumberDesc);             //排序后的新值
+		    obj.className="as";
+		}
+	
+	    for(var i=0;i<columnArray.length;i++){
+	        for(var j=0;j<orginArray.length;j++){
+	            if(orginArray[j]==columnArray[i]){
+	                document.getElementsByName("td2")[i].innerHTML=tdArray2[j];
+	                orginArray[j]=null;
+	                break;
+	            }
+	        }
+	    }
+	}
+</script>
