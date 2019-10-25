@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue 测试实例</title>
+		<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="vue_det">
+			<h1>site: {{ site }}</h1>
+			<h1>url: {{ url }}</h1>
+			<h1>alexa: {{ alexa }}</h1>
+			<h1>{{details()}}</h1>
+		</div>
+		<script type="text/javascript">
+			// 我们的数据对象
+			var data = {site: "端怡科技", url: "www.gmt.com", alexa: "10000"}
+			var vm = new Vue({
+				el: '#vue_det',
+				data: data,
+				methods: {
+					details: function() {
+						return this.site + "- 学的不仅是技术，更是梦想！";
+					}
+				}
+			})
+			// 它们引用相同的镜像
+			document.write(vm.site === data.site)
+			document.write("<br>")
+			vm.site = "电力系统"
+			document.write(data.site + "<br>")
+			
+			data.alexa = 1234
+			document.write(vm.alexa + "<br>")
+			
+			document.write(vm.$data === data)
+			document.write("<br>")
+			document.write(vm.$el === document.getElementById("vue_det"))
+		</script>
+	</body>
+</html>
