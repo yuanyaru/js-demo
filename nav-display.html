@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>导航</title>
+</head>
+<body>
+<input id="navdisplay" type="button" value="导航"/>
+ 
+<div id="nav">
+    <a href="#">栏目一</a>
+    <a href="#">栏目二</a>
+    <a href="#">栏目三</a>
+    <a href="#">栏目四</a>
+</div>
+ 
+<script>
+var nav=document.getElementById("nav");
+nav.style.display="none";
+ 
+document.getElementById("navdisplay").onclick=function(){
+    if(nav.style.display=="none") {
+       nav.style.display="block"; 
+    } else { 
+		nav.style.display="none"; 
+	}
+}  
+</script>
+</body>
+</html>
