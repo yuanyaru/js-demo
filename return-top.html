@@ -14,6 +14,7 @@
                 position:absolute; 
                 cursor:pointer;
                 color:#fff;
+				display:none;
             }
         </style>
         <script type="text/javascript">
@@ -25,9 +26,13 @@
                 oTop.style.top = screenh - oTop.offsetHeight + "px";
                 window.onscroll = function(){
                     var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;//获取滚动条的滚动高度
-                    oTop.style.top = screenh - oTop.offsetHeight + scrolltop +"px";
+					if(scrolltop>0){
+						document.getElementById("to_top").style.display="block";
+						oTop.style.top = screenh - oTop.offsetHeight + scrolltop +"px";
+						oTop.style.left = screenw - oTop.offsetWidth +"px";
+					}
                 }
-                 oTop.onclick = function(){
+			    oTop.onclick = function(){
                     document.documentElement.scrollTop = document.body.scrollTop =0;
                 }
             }       
