@@ -25,9 +25,12 @@
                 oTop.style.left = screenw - oTop.offsetWidth +"px";//确定按钮距离屏幕可视区域左边的位置
                 oTop.style.top = screenh - oTop.offsetHeight + "px";
                 window.onscroll = function(){
+					// alert("a");
                     var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;//获取滚动条的滚动高度
 					if(scrolltop>0){
+						// alert("aa");
 						document.getElementById("to_top").style.display="block";
+						// alert("aaa");
 						oTop.style.top = screenh - oTop.offsetHeight + scrolltop +"px";
 						oTop.style.left = screenw - oTop.offsetWidth +"px";
 					}
