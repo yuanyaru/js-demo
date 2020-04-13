@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<input id="image_name">
+			<input type="button" value="下载镜像"><br /><br />
+			<textarea id="image_info"></textarea>  <input type="button" value="ok">
+			<table id="table_image" bordercolor="#aaaaaa" border="1" cellpadding="0" cellpadding="2" width="100%">
+                <thead>
+                <tr>
+                    <th><input type="checkbox" class="i-checks" id="selectAllCon"/></th>
+                    <th>IMAGE ID</th>
+                    <th>IMAGE NAME</th>
+                    <th>RepoTags</th>
+                </tr>
+                </thead>
+                <tbody id="tBody_image">
+                </tbody>
+            </table>
+			image name：<input id="iname"/>  
+			container name：<input id="cname"/>  <input type="button" value="创建容器">
+		</div>
+	</body>
+</html>
