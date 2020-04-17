@@ -1,19 +1,26 @@
 (function()
 {
     const communicator = Ice.initialize();
-    console.log('aa');
     async function printString()
     {
         try
         {
-            console.log('aa');
             setState(State.Busy);
-            const hostname = document.location.hostname || "127.0.0.1";
+            //服务端在本地
+            // const hostname = document.location.hostname || "127.0.0.1";
+            //服务端在远端
+            const hostname = "192.168.100.61";
             const proxy = communicator.stringToProxy(`SimplePrinter:ws -h ${hostname} -p 10000`);
             const printer = await Demo.PrinterPrx.checkedCast(proxy);
             if(printer)
             {
-                await printer.printString("Hello ice in browser !");
+                exec = document.getElementById("exec");
+                exec.addEventListener('click', function (evt) {
+                    sh = document.getElementById("sh").value;
+                    alert(sh);
+                });
+                // await printer.printString("Hello ice in browser !");
+                await printer.printString(sh);
             }
             else
             {
