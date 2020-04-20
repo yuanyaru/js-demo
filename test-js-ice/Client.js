@@ -1,6 +1,11 @@
 (function()
 {
     const communicator = Ice.initialize();
+    exec = document.getElementById("exec");
+    exec.addEventListener('click', function (evt) {
+        sh = document.getElementById("sh").value;
+        alert(sh);
+    });
     async function printString()
     {
         try
@@ -14,11 +19,6 @@
             const printer = await Demo.PrinterPrx.checkedCast(proxy);
             if(printer)
             {
-                exec = document.getElementById("exec");
-                exec.addEventListener('click', function (evt) {
-                    sh = document.getElementById("sh").value;
-                    alert(sh);
-                });
                 // await printer.printString("Hello ice in browser !");
                 await printer.printString(sh);
             }
