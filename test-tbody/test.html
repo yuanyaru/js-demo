@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/test.css">
+    <title>表头固定内容滚动</title>
+</head>
+<body>
+<label>1-可滚动表格——表格宽度自动每列宽度设置<col></label>
+<div class="tableWrap" style="margin:20px;">
+    <table class="table-thead">
+        <colgroup>
+		   <col width="50">
+           <col width="50">
+           <col width="150">
+           <col width="120">
+           <col width="80">
+           <col width="80">
+           <col width="80">
+           <col width="80">
+           <col width="90">
+           <col width="90">
+           <col width="80">
+           <col width="80">
+           <col width="80">
+		   <col width="17">
+        </colgroup>
+        <thead>
+        <tr>
+            <th><input type="checkbox"/></th>
+            <th>ID</th>
+            <th>name</th>
+			<th>describe</th>
+			<th>ASDU</th>
+			<th>wordPos</th>
+            <th>bitPos</th>
+			<th>bitLength</th>
+			<th>LinkPoint1</th>
+			<th>LinkPoint2</th>
+			<th>OneToZero</th>
+			<th>ZeroToOne</th>
+			<th>address</th>
+			<th></th>
+        </tr>
+        </thead>
+    </table>
+    <div class="comTbody">
+        <table class="table-tbody" style="border-top: 0;">
+            <colgroup>
+                <col width="50">
+                <col width="50">
+                <col width="150">
+                <col width="120">
+                <col width="80">
+                <col width="80">
+                <col width="80">
+                <col width="80">
+                <col width="90">
+                <col width="90">
+                <col width="80">
+                <col width="80">
+                <col width="80">
+            </colgroup>
+            <tbody>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>接地</td>
+                <td>station4_YX_1</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>1</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>接地</td>
+                <td>station4_YX_1</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>1</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>接地</td>
+                <td>station4_YX_1</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>1</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>接地</td>
+                <td>station4_YX_1</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>1</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>1</td>
+                <td>接地</td>
+                <td>station4_YX_1</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>1</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<label>2-可滚动表格——表格宽度100%，列宽度设置<col></label>
+<div class="table-wrap">
+    <div class="table-head">
+        <div class="table-head-wrap">
+            <table class="grid">
+                <thead>
+                <tr>
+                    <th>
+                        <span class="tab-link"><input type="checkbox"/></span>
+                    </th>
+                    <th>
+                        <span class="tab-link">ID</span>
+                    </th>
+                    <th>
+                        <span class="tab-link">name</span>
+                    </th>
+                    <th>
+                        <span class="tab-link">describe</span>
+                    </th>
+					<th>
+					    <span class="tab-link">ASDU</span>
+					</th>
+					<th>
+					    <span class="tab-link">wordPos</span>
+					</th>
+					<th>
+					    <span class="tab-link">bitPos</span>
+					</th>
+					<th>
+					    <span class="tab-link">bitLength</span>
+					</th>
+					<th>
+					    <span class="tab-link">LinkPoint1</span>
+					</th>
+					<th>
+					    <span class="tab-link">LinkPoint2</span>
+					</th>
+					<th>
+					    <span class="tab-link">OneToZero</span>
+					</th>
+					<th>
+					    <span class="tab-link">ZeroToOne</span>
+					</th>
+					<th>
+					    <span class="tab-link">address</span>
+					</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="table-content">
+        <table class="grid">
+            <tbody>
+            <tr>
+                <td>
+                    <div><input type="checkbox"/></div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>station4_YX_1</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+				<td>
+				    <div>0</div>
+				</td>
+				<td>
+				    <div>0</div>
+				</td>
+				<td>
+				    <div>1</div>
+				</td>
+				<td>
+				    <div>1</div>
+				</td>
+				<td>
+				    <div>0</div>
+				</td>
+				<td>
+				    <div>0</div>
+				</td>
+				<td>
+				    <div>0</div>
+				</td>
+				<td>
+				    <div>0</div>
+				</td>
+            </tr>
+            <tr>
+                <td>
+                    <div><input type="checkbox"/></div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>station4_YX_1</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div><input type="checkbox"/></div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>station4_YX_1</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div><input type="checkbox"/></div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>station4_YX_1</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div><input type="checkbox"/></div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>station4_YX_1</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+                <td>
+                    <div>0</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<label>3-可滚动表格——表格宽度自动，列宽度固定设置<col></label>
+<div class="data-grid">
+    <div class="data-view">
+        <div class="grid-head">
+            <div class="grid-head-inner">
+                <table class="data-table">
+                    <tbody>
+                    <tr class="data-table-row">
+                        <td>
+                            <div class="datagrid-cell cell-c1">
+                                <div><input type="checkbox"/></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="datagrid-cell cell-c2">
+                                <div>ID</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="datagrid-cell cell-c3">
+                                <div>name</div>
+                            </div>
+                        </td>
+						<td>
+						    <div class="datagrid-cell cell-c4">
+						        <div>describe</div>
+						    </div>
+						</td>
+                        <td>
+                            <div class="datagrid-cell cell-c5">
+                                <div>ASDU</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="datagrid-cell cell-c6">
+                                <div>wordPos</div>
+                            </div>
+                        </td>
+						<td>
+						    <div class="datagrid-cell cell-c7">
+						        <div>bitPos</div>
+						    </div>
+						</td>
+						<td>
+						    <div class="datagrid-cell cell-c8">
+						        <div>bitLength</div>
+						    </div>
+						</td>
+						<td>
+						    <div class="datagrid-cell cell-c9">
+						        <div>LinkPoint1</div>
+						    </div>
+						</td>
+						<td>
+						    <div class="datagrid-cell cell-c10">
+						        <div>LinkPoint2</div>
+						    </div>
+						</td>
+						<td>
+						    <div class="datagrid-cell cell-c11">
+						        <div>OneToZero</div>
+						    </div>
+						</td>
+						<td>
+						    <div class="datagrid-cell cell-c12">
+						        <div>ZeroToOne</div>
+						    </div>
+						</td>
+						<td>
+						    <div class="datagrid-cell cell-c13">
+						        <div>address</div>
+						    </div>
+						</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="grid-body">
+            <table class="datagrid-btable">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="datagrid-cell cell-c1">
+                            <span><input type="checkbox"/></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c2">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c3">
+                            <span>接地</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c4">
+                            <span>station4_YX_1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c5">
+                            <span>1</span>
+                        </div>
+                    </td>
+					<td>
+					    <div class="datagrid-cell cell-c6">
+					        <span>0</span>
+					    </div>
+					</td>
+					<td>
+					    <div class="datagrid-cell cell-c7">
+					        <span>0</span>
+					    </div>
+					</td>
+					<td>
+					    <div class="datagrid-cell cell-c8">
+					        <span>1</span>
+					    </div>
+					</td>
+					<td>
+					    <div class="datagrid-cell cell-c9">
+					        <span>1</span>
+					    </div>
+					</td>
+					<td>
+					    <div class="datagrid-cell cell-c10">
+					        <span>0</span>
+					    </div>
+					</td>
+					<td>
+					    <div class="datagrid-cell cell-c11">
+					        <span>0</span>
+					    </div>
+					</td>
+					<td>
+					    <div class="datagrid-cell cell-c12">
+					        <span>0</span>
+					    </div>
+					</td>
+					<td>
+					    <div class="datagrid-cell cell-c13">
+					        <span>0</span>
+					    </div>
+					</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="datagrid-cell cell-c1">
+                            <span><input type="checkbox"/></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c2">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c3">
+                            <span>接地</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c4">
+                            <span>station4_YX_1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c5">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c6">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c7">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c8">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c9">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c10">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c11">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c12">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c13">
+                            <span>0</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="datagrid-cell cell-c1">
+                            <span><input type="checkbox"/></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c2">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c3">
+                            <span>接地</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c4">
+                            <span>station4_YX_1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c5">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c6">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c7">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c8">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c9">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c10">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c11">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c12">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c13">
+                            <span>0</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="datagrid-cell cell-c1">
+                            <span><input type="checkbox"/></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c2">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c3">
+                            <span>接地</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c4">
+                            <span>station4_YX_1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c5">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c6">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c7">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c8">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c9">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c10">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c11">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c12">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c13">
+                            <span>0</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="datagrid-cell cell-c1">
+                            <span><input type="checkbox"/></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c2">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c3">
+                            <span>接地</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c4">
+                            <span>station4_YX_1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c5">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c6">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c7">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c8">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c9">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c10">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c11">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c12">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c13">
+                            <span>0</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="datagrid-cell cell-c1">
+                            <span><input type="checkbox"/></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c2">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c3">
+                            <span>接地</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c4">
+                            <span>station4_YX_1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c5">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c6">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c7">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c8">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c9">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c10">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c11">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c12">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c13">
+                            <span>0</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="datagrid-cell cell-c1">
+                            <span><input type="checkbox"/></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c2">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c3">
+                            <span>接地</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c4">
+                            <span>station4_YX_1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c5">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c6">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c7">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c8">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c9">
+                            <span>1</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c10">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c11">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c12">
+                            <span>0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="datagrid-cell cell-c13">
+                            <span>0</span>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
